@@ -1,0 +1,98 @@
+body{
+    background: linear-gradient(rgb(199, 179, 179), rgb(47, 255, 148), rgb(12, 206, 255));
+    /* background-color: antiquewhite; */
+    font-family: sans-serif;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(72, 34, 108);
+    text-shadow: 2px 2px 4px rgba(41, 88, 206, 0.68);
+}
+
+p {
+    font-size: 13px;
+}
+
+#highlight {
+    color: rgb(1, 211, 183);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+.fancy{
+    font-style: italic;
+    color: aquamarine;
+}
+
+.example {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style:oblique;
+    font-size: larger;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+ul.listsatu {
+    background-color: rgb(206, 174, 174);
+    margin: 10px 5px 5px 10px;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+ol.listdua {
+    background-color: rgb(122, 120, 214);
+    margin: 10px 5px 5px 10px;
+    list-style-type: lower-latin;
+    list-style-position: inside;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.section1 {
+    background-color: rgba(165, 42, 42, 0.288);
+    margin: 10px 5px 5px 10px;
+    list-style-position: inside;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mark {
+    background-color: rgb(124, 124, 255);
+    font-style: italic;
+    font-weight: bold;
+    padding:  3px 5px;
+    border-radius: 10px;
+}
+
+.animate-text {
+    color: rgb(49, 46, 42);
+    font-size: 50px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+a.btn {
+    display: inline-block;
+    background-color: teal;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+a.btn:hover {
+    background-color: blue;
+    transform: scale(1.1);
+}

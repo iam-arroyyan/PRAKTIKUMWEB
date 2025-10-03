@@ -1,0 +1,16 @@
+/* Tambahkan latar belakang berwarna lembut pada halaman. */
+/* Gunakan font sans-serif untuk seluruh teks. */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif; 
+}
+
+/* Ubah warna teks heading menjadi biru. */
+h1, h2 {
+    color: #007bff; 
+}
+
+/* Atur jarak antar paragraf menggunakan properti margin. */
+p {
+    margin: 10px 0; 
+}

@@ -20,10 +20,17 @@ Berikut adalah direktori yang tersedia dalam repositori ini:
     * Berisi materi dan tugas praktikum untuk minggu ke-4.
     * **Topik:** BOOTSTRAP.
 
+* **[Minggu 5](./Minggu%205)**
+    * Berisi materi dan tugas praktikum untuk minggu ke-5.
+    * **Topik:** Javascript.
+
+* **[Tugas Javascript](./Tugas%20Javascript)**
+    * Berisi tugas praktikum untuk minggu ke-5.
+
 * **[Tugas Praktikum](./Tugas%20Praktikum)**
     * Kumpulan tugas-tugas selama praktikum.
 
 ---
 
-### 🧑‍💻 Pemilik Repositori
+### 🧑‍💻 Owner Repositori
 Dibuat dan dikelola oleh **iam-arroyyan**.

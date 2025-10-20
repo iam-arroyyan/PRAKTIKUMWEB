@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Validasi Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* style kustom layout */
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card shadow-sm border-0 my-5">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="card-title text-center h2 mb-1">Buat Akun</h1>
+                        
+                        <!-- untuk pesan error/sukses -->
+                        <div id="pesan-error" class="alert alert-danger d-none" role="alert"></div>
+                        <div id="pesan-sukses" class="alert alert-success d-none" role="alert"></div>
+
+                        <!-- Formulir -->
+                        <form id="formulir-validasi" novalidate>
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama</label>
+                                <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="contoh@domain.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Minimal 8 karakter" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    Kirim
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // mengubah id html ke variabel konstan
+        const form = document.getElementById('formulir-validasi');
+        const namaInput = document.getElementById('nama');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const pesanError = document.getElementById('pesan-error');
+        const pesanSukses = document.getElementById('pesan-sukses');
+
+        // event listener untuk proses submit pada form
+        form.addEventListener('submit', function(event) {
+            // Mencegah form dikirim secara default
+            event.preventDefault();
+
+            // Sembunyikan alert sebelum diolah
+            pesanError.classList.add('d-none');
+            pesanSukses.classList.add('d-none');
+            pesanError.innerHTML = '';
+
+            // Mengambil nilai dari input sekaligus menghapus spasi di awal/akhir
+            const nama = namaInput.value.trim();
+            const email = emailInput.value.trim();
+            const password = passwordInput.value.trim();
+            
+            // Variabel temp pesan error
+            let daftarError = [];
+
+            // Validasi semua input telah diisi
+            if (nama === '' || email === '' || password === '') {
+                daftarError.push('Semua kolom wajib diisi.');
+            }
+
+            // Validasi format email menggunakan Regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email !== '' && !emailRegex.test(email)) {
+                daftarError.push('Format email tidak valid (contoh: nama@domain.com).');
+            }
+
+            // Validasi panjang password
+            if (password !== '' && password.length < 8) {
+                daftarError.push('Password harus memiliki minimal 8 karakter.');
+            }
+
+            // Memeriksa apa ada error
+            if (daftarError.length > 0) {
+                // Jika ada error, menampilkan text error
+                pesanError.innerHTML = daftarError.join('<br>');
+                pesanError.classList.remove('d-none');
+            } else {
+                // Jika tidak ada error, menampilkan text sukses
+                pesanSukses.textContent = 'Formulir berhasil dikirim!';
+                pesanSukses.classList.remove('d-none');
+                
+                console.log('Data yang akan dikirim:', { nama, email, password });
+                setTimeout(() => {
+                    window.location.href = 'https://maganghub.kemnaker.go.id/';
+                }, 3000);
+            }
+        });
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+

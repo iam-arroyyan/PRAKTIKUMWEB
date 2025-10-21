@@ -24,11 +24,18 @@ Berikut adalah direktori yang tersedia dalam repositori ini:
     * Berisi materi dan tugas praktikum untuk minggu ke-5.
     * **Topik:** Javascript.
 
+* **[Minggu 6](./Minggu%206)**
+    * Berisi materi dan tugas praktikum untuk minggu ke-5.
+    * **Topik:** PHP.
+
 * **[Tugas Javascript](./Tugas%20Javascript)**
     * Berisi tugas praktikum untuk minggu ke-5.
 
 * **[Tugas Praktikum](./Tugas%20Praktikum)**
     * Kumpulan tugas-tugas selama praktikum.
+
+* **[Tugas PHP](./Tugas%20php)**
+    * Berisi tugas praktikum untuk minggu ke-6.
 
 ---
 
